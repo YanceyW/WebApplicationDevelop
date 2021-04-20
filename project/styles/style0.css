@@ -1,0 +1,258 @@
+@import "recipe.css";
+@import "user.css";
+
+
+:root {
+    --nav-background: #6b9080;
+    --search-background: #cce3de;
+    --search-button-background: #f0f3bd;
+    --search-button-hover: #a4c3b2;
+    --link-color: black;
+    --white: white;
+    --box-shadow: #bfc0c0;
+    --recipe-background: #cce3de;
+    --modal-background1: rgba(0, 0, 0);
+    --modal-background2: rgba(0, 0, 0, 0.4);
+}
+body {
+    margin: 0;
+}
+
+/* nav bar */
+#nav nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    font-size: 1.5em;
+    background-color: var(--nav-background);
+}
+
+/*unordered list*/
+#nav ul{
+    /* border-radius: 0.3em; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 0.5em 1em;
+    margin: 0em;
+}
+
+#nav li {
+    color: black;
+}
+
+
+#nav li > a{
+    font-weight: bolder;
+    color: var(--link-color);
+    margin-left: 0.8em;
+    text-decoration: none;
+}
+
+#nav li > a:hover{
+    color: var(--search-button-hover);
+}
+
+.recipe > a, .create_new_recipe > a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+
+/*input*/
+#nav input{
+    height: 2em;
+    padding: 0.4em;
+    padding-left: 3.3em;
+    background-color:  var(--search-background);
+    border: 0;
+    border-radius: 0.4em;
+}
+
+#nav input:focus{
+    outline: none;
+}
+
+.fa-search{
+    position: absolute;
+    padding-left: 0.2em;
+}
+
+.nav_form > button {
+    border: 0em;
+    width: 4em;
+    height: 3em;
+    font-size: 0.62em;
+    margin: 0.3em;
+    border-radius: 0.5em;
+    background-color: var(--search-button-background);
+}
+
+.nav_form > button:hover{
+    background-color: var(--search-button-hover);
+    color: var(--white);
+}
+
+.nav_form {
+    justify-self: end;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
+
+    flex: 0 1 19.5em;
+    /* flex-grow: 1; */
+}
+
+
+
+
+#nav > form {
+    margin-top: 6em;
+}
+/* display recipe */
+/* for the whole recipe display part */
+#recipeDisplayPart{
+    margin-top: 7em;
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: auto auto auto auto;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* for each recipe */
+.create_new_recipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe, .create_new_recipe{
+    text-align: center;
+    /* width: 20%; */
+    margin: 1.5%;
+    border-radius: 0.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.3em 0.1em var(--box-shadow);
+    padding: 0.5em;
+    font-size: 1.5em;
+    outline: none;
+    overflow: auto;
+    background-color: var(--recipe-background);
+}
+.recipe:hover, .create_new_recipe:hover {
+    box-shadow: none;
+}
+.recipe > span, .create_new_recipe > span {
+    display: block;
+    font-weight: 400;
+}
+
+
+/* for each recipe title */
+.recipe > .recipeTitle {
+    /* font-size: 1.2em; */
+    font-weight: bolder;
+}
+
+.fa-plus {
+    font-size: 1.3em;
+    margin: 0.2em;
+}
+
+#findRecipe{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1.5em 0 1.5em;
+}
+
+#findRecipe p{
+    display: inline;
+    color: red;
+}
+
+/* end of display recipe */
+
+.login-message {
+    margin: 3em;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 700;
+}
+.login-message p:last-child{
+    color: red;
+}
+/* **************************************
+   RECIPE MODAL  
+ ***************************************** */
+ #recipe_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background1);
+    background-color: var(--modal-background2);
+    animation: animation 0.5s;
+}
+
+.modal-header {
+    padding: 2em 3em 0;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 3em;
+    margin: auto;
+    margin-bottom: 2em;
+    width: 65%;
+}
+
+.close-button {
+    color: var(--nav-background);
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.close-button:hover {
+    color: var(--search-button-hover);
+}
+
+@keyframes animation {
+    from {
+        top: -15em;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.recipe-button {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    margin-bottom: 2em;
+    width: 65%;
+}
+
+button[name='delete'] {
+    display: inline;
+}
+
+
+#paging p{
+    text-align: center;
+    font-size: 1.5em;
+}
+

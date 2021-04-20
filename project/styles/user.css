@@ -1,0 +1,120 @@
+
+/*---------------------------------------------- for body -----------------------------------------------*/
+ 
+#partD {
+    margin: 10em auto 8em;
+}
+
+/*set form*/
+#partD main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 40em;
+    box-shadow: 0 0.2em 0.8em 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto 0;
+    padding: 5em;
+}
+
+/*set tittle*/
+#partD h1 {
+    color: #4285f4;
+    font-size: 2.5em;
+}
+
+/*for check box*/
+#partD form {
+    color: #787878;
+    margin: 1em auto 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#partD div a:visited {
+    color: red;
+}
+
+#partD button {
+    /* margin-left: 3em; */
+    min-width: 28em;
+    background-color: #4285f4;
+    color: honeydew;
+    padding: 0.6em;
+    margin: 2em 0 0;
+}
+
+/*for input */
+#partD input {
+    color: blue;
+    width: 97%;
+}
+
+
+#partD > main > form > div {
+    margin-bottom: 0.5em;
+    width: 90%;
+}
+.input-check {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+#partD #check {
+    width: 10%;
+}
+
+
+/* animation for waiting page */
+/* References for animation: https://www.w3schools.com/ */
+#partD .loader{
+
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+.rating {
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+
+/* for password type  */
+.weakPassword {
+    background-color: #EF1111;
+}
+
+.moderatePassword {
+    background-color: #FFC700;
+}
+
+.strongPassword {
+    background-color: #22BA3E;
+}
+
+
+
+    

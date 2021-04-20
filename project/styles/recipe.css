@@ -1,0 +1,184 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+:root {
+    --border-color: rgba(228, 226, 226, 0.815);
+    --button-background: white;
+    --footer-background: #6b9080;
+}
+
+
+
+body, button, input {
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+    font-family: 'Playfair Display', serif;
+}
+#form {
+    margin: 6em  20% 4em;
+}
+textarea, input, button {
+    padding: 0.4em;
+    width: 100%;
+    outline: none;
+    border-radius: 0.5em;
+    border: 0.2em solid var(--border-color);
+    margin: 0.5em 0 0.5em;
+}
+/* **************************** 
+    Recipe Title
+****************************** */
+.recipe_title {
+    text-align: center;
+}
+
+.recipe_info {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.private_check, .recipe_tags {
+    width: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe_tags {
+    width: auto;
+}
+
+.recipe_tags > input {
+    width: 75%;
+}
+.recipe_tags > label {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+
+/* **************************** 
+    Recipe introduction
+****************************** */
+.intro {
+    margin: 2em 0 4em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.intro > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-right: 0.15em solid var(--border-color);
+    padding: 0 1em 0;
+    
+}
+.intro > div:nth-last-of-type(1) {
+    border: none;
+}
+
+span {
+    font-weight: bolder;
+}
+
+.intro_detail {
+    font-weight: 400;
+}
+
+.prep_time, .cook_time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.time input {
+    flex: 1;
+}
+.time label {
+    margin-left: 0.5em;
+}
+
+label[for="prep_hour"], label[for="cook_hour"] {
+    padding-left: 1.1em;
+}
+
+
+
+
+/* **************************** 
+    Recipe ingredients
+****************************** */
+ul {
+    columns: 2;
+    padding: 0 10% 0;
+}
+
+.ingredient ul li {
+    list-style: none;
+}
+
+.ingredient ul li:before {
+    content: "·";
+    font-size:1em;
+    padding-right: 1em;
+    font-weight: 700 ;
+    vertical-align:middle;
+    line-height:20px;
+}
+
+
+/* **************************** 
+    Create new button
+****************************** */
+.create_new {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    margin: 1.5em;
+    width: 7em;
+    background-color: var(--button-background);
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: var(--border-color);
+}
+/* **************************** 
+    Footer
+****************************** */
+footer {
+    color: white;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 4em  0 0.5em;
+    padding: 1em 0 1em;
+    text-align: center;
+    font-size: 0.7em;
+    background-color: var(--footer-background);
+}
+
+
+/* **************************** 
+    PHP
+****************************** */
+
+.intro_error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error {
+    margin: 0.5em;
+}
+.hidden {
+    display: none;
+}
+
+
